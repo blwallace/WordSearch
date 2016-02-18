@@ -44,7 +44,10 @@ public class Main {
             wordMap = new String[n][m];
 
             for(int i = 0; i < n; i++){
-                wordMap[i] = in.nextLine().split("");
+                String nLine = in.nextLine();
+                for(int j = 0; j < nLine.length(); j++){
+                    wordMap[i][j] = String.valueOf(nLine.charAt(j));
+                }
             }
 
             String wrapper = in.nextLine();

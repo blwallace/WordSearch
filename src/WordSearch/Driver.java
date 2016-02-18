@@ -73,6 +73,9 @@ public class Driver {
             // Loop through all instances of character in matrix
             while(wordList.hasNext()){
                 // Find instances in matrix with character
+                if(matrix.get(firstChar) == null){
+                    break;
+                }
                 Iterator coordinates = ((LinkedList) matrix.get(firstChar)).iterator();
                 boolean found = false;
                 String word = (String) wordList.next();
