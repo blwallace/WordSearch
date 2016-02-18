@@ -32,14 +32,14 @@ public class LetterMatrix {
         this.n = n;
         this.m = m;
         this.matrixInput = matrix;
-        LinkedList list;
+        LinkedList<int[]> list;
 
         // Creating our hashmap
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
                 list = hMap.get(matrixInput[i][j]);
                 if(list == null){
-                    list = new LinkedList();
+                    list = new LinkedList<int[]>();
                 }
                 int[] coords = new int[]{i, j};
                 list.add(coords);

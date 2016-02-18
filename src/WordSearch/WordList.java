@@ -25,14 +25,14 @@ public class WordList {
     public WordList(String[] words){
 
         this.words = words;
-        LinkedList list;
+        LinkedList<String> list;
 
         //Creating our hashmap
         for(int i = 0; i < words.length; i++){
             String firstLetter = words[i].substring(0,1);
             list = hMap.get(firstLetter);
             if(list == null){
-                list = new LinkedList();
+                list = new LinkedList<String>();
             }
             list.add(words[i]);
             hMap.put(firstLetter,list);

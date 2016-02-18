@@ -18,8 +18,13 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        System.out.println("Please enter file name. You can type testInput.txt for example");
+        Scanner scan = new Scanner(System.in);
+        String fileLocation = scan.nextLine();
+        scan.close();
+
         // Run program. First load file, the feed inputs into driver
-        load();
+        load(fileLocation);
         Driver driver = new Driver(wordMap,dictionary,wrap,n,m);
         driver.run();
         driver.printResults();
@@ -27,8 +32,8 @@ public class Main {
 
 
     // This opens our file and parses the data.
-    public static void load() throws FileNotFoundException {
-        File inputFile = new File("testInput.txt");
+    public static void load(String fileLocation) throws FileNotFoundException {
+        File inputFile = new File(fileLocation);
         Scanner in = new Scanner(inputFile);
 
         while(in.hasNextLine()){
