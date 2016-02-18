@@ -1,18 +1,22 @@
 # WordSearch
 
-
 Introduction
 
-In a typical word search puzzle (http://en.wikipedia.org/wiki/Word_search), you are given an NxM grid of seemingly random letters and a list of P words that are in the grid. The words can be found going in any of the 8 directions in a two dimensional grid:
-
-top to bottom,
-bottom to top,
-left to right,
-right to left,
-bottom left to top right,
-bottom right to top left,
-top left to bottom right,
-top right to bottom left
+A word search puzzle (http://en.wikipedia.org/wiki/Word_search)
 
 This program searches for the words in list P and outputs the coordinates of the words.
-# WordSearch
+
+
+TO COMPILE AND RUN
+
+Step 1: cd into 'WordSearch'. You should see the src and out directory, a readme file, and 'input.txt'
+
+Step 2: To compile
+	javac -d out src/WordSearch/*.java
+
+Step 3: To run the program
+	java -cp ./out WordSearch.Main
+
+Step 4: Input file location.  
+		NOTE: You can simply run the test file by entering testInput.txt
+
