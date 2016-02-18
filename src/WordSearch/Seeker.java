@@ -70,6 +70,11 @@ public class Seeker implements Iterable {
                 }
             }
 
+            @Override
+            public void remove(){
+                
+            }
+
             // Returns the position of the next character
 
             @Override
