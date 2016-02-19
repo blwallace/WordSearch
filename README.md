@@ -1,5 +1,6 @@
 # WordSearch
 
+------------------------------------
 INTRODUCTION
 
 A word search puzzle (http://en.wikipedia.org/wiki/Word_search)
@@ -7,6 +8,7 @@ A word search puzzle (http://en.wikipedia.org/wiki/Word_search)
 This program searches for the words in list P and outputs the coordinates of the words.
 
 
+------------------------------------
 TO COMPILE AND RUN
 
 Step 1: cd into 'WordSearch'. You should see the src and out directory, a readme file, and 'testInput.txt'
@@ -23,9 +25,10 @@ Step 4: Input file location.
 		in this (WordSearch) folder or replace the testInput.txt file
 
 
+------------------------------------
 GENERAL OVERVIEW
 
-We are given a grid of characters and a list of words.
+We are given a grid of characters and a list of words. This program searches for the words in the grid.
 
 b z c
 b a a
@@ -33,7 +36,37 @@ b z t
 
 Words: {car, cat, bat}
 
-Java Object:
+
+
+------------------------------------
+ALGORITHM: 
+
+INPUTS:
+	n = # of rows
+	m = # of columns
+	p = # of words in dictionary
+	M = 2d matrix of characters
+	Q = set of words
+	D = set of directions
+	R = set of results
+
+create L = hashmap< character, list< coorinates >>
+create W = hashmap< character, list< strings >>
+for i from 1 to n 				//INITIALIZE L hashmap
+	for j from 1 to m
+		L.put(M[n][m])
+for i from 1 to p 				// INITIALIZE W HASHMAP
+	W.put(first letter of Q[i], list[ Q[i]] ) 	
+for each W.key in W 			// ITERATE THROUGH EACH WORD. GET FIRST LETTER OF WORD
+	for each coordinate in L where L.key = W.key  // FIND COORDINATE WITH LETTER
+		for each direction in D   				//  SEARCH IN EACH DIRECTION 
+			x = seeker(coordinate,direction) 	
+			if x != null					// IF WE FIND A MATCH
+				add x to R 					// ADD FINDING TO LIST OF RESULTS
+
+
+------------------------------------
+JAVA OBJECTS
 
 WordList: A hashmap of the first letters in each of our words.  
 
