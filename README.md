@@ -19,6 +19,8 @@ Step 3: To run the program
 
 Step 4: Input file location.  
 		NOTE: You can simply run the test file by entering testInput.txt
+		If you are experiencing trouble entering the file location, put input file
+		in this (WordSearch) folder or replace the testInput.txt file
 
 
 GENERAL OVERVIEW
